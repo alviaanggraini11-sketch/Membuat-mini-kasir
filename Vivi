@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int ketik, porsi, total;
+    cout<<"_________________________________________"<<endl;
+    cout<<"Selamat datang di tempat makan Sederhana!"<<endl;
+    cout<<"Ketik 1 untuk memesan menu soto"<<endl;
+    cout<<"Ketik 2 untuk memesan menu rawon"<<endl;
+    cin>>ketik;
+    if (ketik=1) {
+        cout<<"_________________________________________"<<endl;
+        cout<<"Anda memilih soto, seharga Rp15.000"<<endl;
+        cout<<"Pesan berapa porsi?"<<endl;
+        cin>>porsi;
+        total=porsi*15000;
+    }
+    else {
+        cout<<"_________________________________________"<<endl;
+        cout<<"Anda memilih rawon, seharga Rp20.000"<<endl;
+        cout<<"Pesan berapa porsi?"<<endl;
+        cin>>porsi;
+        total=porsi*20000;
+    }
+    cout<<"_________________________________________"<<endl;
+    cout<<"Total harga pesanan anda adalah"<<endl;
+    cout<<total;
+    return 0;
+}
