@@ -1,0 +1,25 @@
+
+name: Build C++ EXE
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Compile C++
+        run: |
+          g++ main.cpp -o Program.exe -std=c++17 -static
+
+      - name: Upload EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: Program-Windows
+          path: Membuat-mini-kasir.exe
